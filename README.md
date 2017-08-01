@@ -4,7 +4,7 @@ Contract Suppliers
 OCDS is designed around a contracting model in which:
 
 * One or more awards are made naming the selected suppliers;
-* One contract is signed for each award made, refering back to the related award;
+* One contract is signed for each award made, referring back to the related award;
 
 For this reason, the core ```contract``` block does not include information on ```suppliers```. These can be located by looking at the related ```award``` using the ```awardID``` cross-reference.
 
