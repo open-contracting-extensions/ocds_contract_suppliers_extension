@@ -11,8 +11,6 @@ However, there are some contracting processes in which a single award to multipl
 
 The Contract suppliers extension introduces a `contract/suppliers` array for this purpose.
 
-## Schema
-
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
