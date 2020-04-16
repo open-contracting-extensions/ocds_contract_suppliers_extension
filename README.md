@@ -13,7 +13,7 @@ The Contract Suppliers extension introduces a `contracts.suppliers` array for th
 
 ## Example
 
-A tender is awarded to consortia with multiple suppliers. Then a contract is made for each of them separately. When this extension is used, you should fill `contracts.items` and `contracts.value` with the awarded items and value for each supplier.
+An award is made to a consortium with multiple suppliers. Then, a contract is signed with each of them separately. When this extension is used, you should fill `contracts.items` and `contracts.value` with the awarded items and value for each supplier.
 
 ```json
 {
@@ -32,7 +32,7 @@ A tender is awarded to consortia with multiple suppliers. Then a contract is mad
           "unit": {
             "name": "Miles",
             "value": {
-              "amount": 1000,
+              "amount": 10000,
               "currency": "GBP"
             }
           }
@@ -72,7 +72,7 @@ A tender is awarded to consortia with multiple suppliers. Then a contract is mad
           "unit": {
             "name": "Miles",
             "value": {
-              "amount": 1000,
+              "amount": 10000,
               "currency": "GBP"
             }
           }
@@ -100,7 +100,7 @@ A tender is awarded to consortia with multiple suppliers. Then a contract is mad
           "unit": {
             "name": "Miles",
             "value": {
-              "amount": 1000,
+              "amount": 10000,
               "currency": "GBP"
             }
           }
