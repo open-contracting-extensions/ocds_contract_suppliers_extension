@@ -11,6 +11,106 @@ However, there are some contracting processes in which a single award to multipl
 
 The Contract Suppliers extension introduces a `contracts.suppliers` array for this purpose.
 
+## Example
+
+An award is made to a consortium with multiple suppliers. Then, a contract is signed with each of them separately. When this extension is used, you should fill `contracts.items` and `contracts.value` with the awarded items and value for each supplier.
+
+```json
+{
+  "awards": [
+    {
+      "id": "ocds-213czf-000-00001-award-01",
+      "value": {
+        "amount": 100000,
+        "currency": "GBP"
+      },
+      "items": [
+        {
+          "id": "0001",
+          "description": "Construction work for highways",
+          "quantity": 10,
+          "unit": {
+            "name": "Miles",
+            "value": {
+              "amount": 10000,
+              "currency": "GBP"
+            }
+          }
+        }
+      ],
+      "suppliers": [
+        {
+          "id": "GB-COH-1234567844",
+          "name": "AnyCorp Cycle Provision"
+        },
+        {
+          "id": "GB-COH-789456123",
+          "name": "OtherCorp"
+        }
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "id": "ocds-213czf-000-00001-contract-01",
+      "awardID": "ocds-213czf-000-00001-award-01",
+      "value": {
+        "amount": 70000,
+        "currency": "GBP"
+      },
+      "suppliers": [
+        {
+          "id": "GB-COH-1234567844",
+          "name": "AnyCorp Cycle Provision"
+        }
+      ],
+      "items": [
+        {
+          "id": "0001",
+          "description": "Construction work for highways",
+          "quantity": 7,
+          "unit": {
+            "name": "Miles",
+            "value": {
+              "amount": 10000,
+              "currency": "GBP"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "ocds-213czf-000-00001-contract-02",
+      "awardID": "ocds-213czf-000-00001-award-01",
+      "value": {
+        "amount": 30000,
+        "currency": "GBP"
+      },
+      "suppliers": [
+        {
+          "id": "GB-COH-789456123",
+          "name": "OtherCorp"
+        }
+      ],
+      "items": [
+        {
+          "id": "0001",
+          "description": "Construction work for highways",
+          "quantity": 3,
+          "unit": {
+            "name": "Miles",
+            "value": {
+              "amount": 10000,
+              "currency": "GBP"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
 ## Issues
 
 Report issues for this extension in the [ocds-extensions repository](https://github.com/open-contracting/ocds-extensions/issues), putting the extension's name in the issue's title.
